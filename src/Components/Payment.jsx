@@ -12,7 +12,7 @@ const Payment = ({ amount, cartItems }) => {
     const handlePayment = async () => {
         try {
             // Make API call to create order
-            const response = await axios.post('/api/createorder', {
+            const response = await axios.post('https://artify-backend-gk1b.onrender.com/createorder', {
                 amount: amount * 100, // Convert to smallest currency unit
                 currency: 'INR',
                 receipt: 'order_rcptid_11',
